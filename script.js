@@ -1,6 +1,6 @@
 // Vars for both selection placeholders
 let computerSelection = computerPlay();
-let playerSelection;
+let playerSelection = prompt("Choose Rock, Paper, or Scissors!",'');
 
 // Create a function to display Rock/ Paper/ Scissors at random
 function computerPlay(){
@@ -17,4 +17,5 @@ function computerPlay(){
     }
 }
 
-console.log(computerSelection)
+console.log(`Player Selects: ${playerSelection}`)
+console.log(`Computer Selects: ${computerSelection}`)
