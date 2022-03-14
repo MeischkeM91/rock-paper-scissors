@@ -1,3 +1,7 @@
+// Vars for both selection placeholders
+let computerSelection = computerPlay();
+let playerSelection;
+
 // Create a function to display Rock/ Paper/ Scissors at random
 function computerPlay(){
     //create a random number between 1-99
@@ -13,4 +17,4 @@ function computerPlay(){
     }
 }
 
-console.log(computerPlay())
+console.log(computerSelection)
