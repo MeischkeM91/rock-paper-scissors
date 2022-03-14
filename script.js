@@ -15,8 +15,9 @@ function computerPlay(){
 
 // Create a function that will play a round of rock,paper,scissors
 function playRound(playerSelection, computerSelection){
-    playerChoice=playerSelection.toLowerCase();
-    computerChoice=computerSelection.toLowerCase();
+    let playerChoice=playerSelection.toLowerCase();
+    let computerChoice=computerSelection.toLowerCase();
+    
     if (playerChoice == computerChoice){
         return "It's a tie, how exciting.";
     }
@@ -32,6 +33,7 @@ function playRound(playerSelection, computerSelection){
         if (computerChoice == "rock"){ return `You lose! ${computerSelection} beats ${playerSelection}`}
         else {return `You win! ${playerSelection} beats ${computerSelection}`}
     }
+    return playerWins;
 }
 
 // Create a function to play a 5 round game
