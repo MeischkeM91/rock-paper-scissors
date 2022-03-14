@@ -19,19 +19,21 @@ function computerPlay(){
 
 // Create a function that will play a round of rock,paper,scissors
 function playRound(playerSelection, computerSelection){
-    if (playerSelection == computerSelection){
+    playerChoice=playerSelection.toLowerCase();
+    computerChoice=computerSelection.toLowerCase();
+    if (playerChoice == computerChoice){
         return "It's a tie, how exciting.";
     }
-    else if (playerSelection == "Rock"){
-        if (computerSelection == "Paper"){ return `You lose! ${computerSelection} beats ${playerSelection}`}
+    else if (playerChoice == "rock"){
+        if (computerChoice == "paper"){ return `You lose! ${computerSelection} beats ${playerSelection}`}
         else {return `You win! ${playerSelection} beats ${computerSelection}`}
     }
-    else if (playerSelection == "Paper"){
-        if (computerSelection == "Scissors"){ return `You lose! ${computerSelection} beats ${playerSelection}`}
+    else if (playerChoice == "paper"){
+        if (computerChoice == "scissors"){ return `You lose! ${computerSelection} beats ${playerSelection}`}
         else {return `You win! ${playerSelection} beats ${computerSelection}`}
     }
-    else if (playerSelection == "Scissors"){
-        if (computerSelection == "Rock"){ return `You lose! ${computerSelection} beats ${playerSelection}`}
+    else if (playerChoice == "scissors"){
+        if (computerChoice == "rock"){ return `You lose! ${computerSelection} beats ${playerSelection}`}
         else {return `You win! ${playerSelection} beats ${computerSelection}`}
     }
 }
