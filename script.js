@@ -17,5 +17,25 @@ function computerPlay(){
     }
 }
 
+// Create a function that will play a round of rock,paper,scissors
+function playRound(playerSelection, computerSelection){
+    if (playerSelection == computerSelection){
+        return "It's a tie, how exciting.";
+    }
+    else if (playerSelection == "Rock"){
+        if (computerSelection == "Paper"){ return `You lose! ${computerSelection} beats ${playerSelection}`}
+        else {return `You win! ${playerSelection} beats ${computerSelection}`}
+    }
+    else if (playerSelection == "Paper"){
+        if (computerSelection == "Scissors"){ return `You lose! ${computerSelection} beats ${playerSelection}`}
+        else {return `You win! ${playerSelection} beats ${computerSelection}`}
+    }
+    else if (playerSelection == "Scissors"){
+        if (computerSelection == "Rock"){ return `You lose! ${computerSelection} beats ${playerSelection}`}
+        else {return `You win! ${playerSelection} beats ${computerSelection}`}
+    }
+}
+
 console.log(`Player Selects: ${playerSelection}`)
 console.log(`Computer Selects: ${computerSelection}`)
+console.log(playRound(playerSelection,computerSelection))
