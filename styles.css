@@ -1,0 +1,17 @@
+* {
+    background-color: lightblue;
+}
+.content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+.btnContainer{
+    display: flex;
+    justify-content: space-around;
+    gap: 35px;
+}
+button{
+    background-color: lemonchiffon;
+}
