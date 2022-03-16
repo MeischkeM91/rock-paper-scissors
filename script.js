@@ -50,9 +50,19 @@ function playRound(playerSelection, computerSelection){
 
 playGame();*/
 
-//set var for the div that will hold the buttons
-const btnContainer = document.querySelector('.btnContainer');
-// create a button for each choice
+// Create var to reference the body
+const body = document.querySelector('body');
+// Create a div to place content into
+const content = document.createElement('div');
+content.classList.add('content');
+// Append content to the body
+body.appendChild(content);
+// Create div that will hold the buttons
+const btnContainer = document.createElement('div');
+btnContainer.classList.add('btnContainer');
+// Append btnContainer to content
+content.appendChild(btnContainer);
+// Create a button for each choice
 // Rock Button that plays round when clicked and logs to console
 const rockBtn = document.createElement('button');
 rockBtn.classList.add('rockBtn');
