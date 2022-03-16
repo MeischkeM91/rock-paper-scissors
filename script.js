@@ -48,4 +48,4 @@ function playGame(){
     }
 }
 
-playGame()
+playGame() 
