@@ -11,7 +11,7 @@ function computerPlay(){
     else {
         return "Scissors";
     }
-}
+};
 
 // Create a function that will play a round of rock,paper,scissors
 function playRound(playerSelection, computerSelection){
@@ -34,10 +34,10 @@ function playRound(playerSelection, computerSelection){
         else {return `You win! ${playerSelection} beats ${computerSelection}`}
     }
     return playerWins;
-}
+};
 
 // Create a function to play a 5 round game
-function playGame(){
+/* function playGame(){
     for(let i=0;i<5;i++){
         // Vars for both selection placeholders
         let computerSelection = computerPlay();
@@ -46,6 +46,36 @@ function playGame(){
         console.log(`Computer Selects: ${computerSelection}`)
         console.log(playRound(playerSelection,computerSelection))
     }
-}
+} 
 
-playGame()
+playGame();*/
+
+//set var for the div that will hold the buttons
+const btnContainer = document.querySelector('.btnContainer');
+// create a button for each choice
+// Rock Button that plays round when clicked and logs to console
+const rockBtn = document.createElement('button');
+rockBtn.classList.add('rockBtn');
+rockBtn.textContent = "Rock";
+rockBtn.addEventListener('click', () =>{
+    console.log(playRound(rockBtn.textContent,computerPlay()));
+});
+// Paper Button that plays round when clicked and logs to console
+const paperBtn = document.createElement('button');
+paperBtn.classList.add('paperBtn');
+paperBtn.textContent = "Paper";
+paperBtn.addEventListener('click', () =>{
+    console.log(playRound(paperBtn.textContent,computerPlay()));
+});
+// Scissor Button that plays round when clicked and logs to console
+const scissorsBtn = document.createElement('button');
+scissorsBtn.classList.add('scissorsBtn');
+scissorsBtn.textContent = "Scissors";
+scissorsBtn.addEventListener('click', () =>{
+    console.log(playRound(scissorsBtn.textContent,computerPlay()));
+});
+
+// Append each button into the btnContainer
+btnContainer.appendChild(rockBtn);
+btnContainer.appendChild(paperBtn);
+btnContainer.appendChild(scissorsBtn);
