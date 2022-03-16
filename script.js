@@ -52,6 +52,7 @@ playGame();*/
 
 // Create var to reference the body
 const body = document.querySelector('body');
+
 // Create a div to place content into
 const content = document.createElement('div');
 content.classList.add('content');
@@ -60,31 +61,36 @@ body.appendChild(content);
 // Create div that will hold the buttons
 const btnContainer = document.createElement('div');
 btnContainer.classList.add('btnContainer');
+// Create a div that will display the outcome
+const results = document.createElement('div');
+results.classList.add('results');
 // Append btnContainer to content
 content.appendChild(btnContainer);
+// Append results div after buttons
+content.appendChild(results);
+
 // Create a button for each choice
-// Rock Button that plays round when clicked and logs to console
+// Rock Button that plays round when clicked and displays to results
 const rockBtn = document.createElement('button');
 rockBtn.classList.add('rockBtn');
 rockBtn.textContent = "Rock";
 rockBtn.addEventListener('click', () =>{
-    console.log(playRound(rockBtn.textContent,computerPlay()));
+    results.textContent = playRound(rockBtn.textContent,computerPlay());
 });
-// Paper Button that plays round when clicked and logs to console
+// Paper Button that plays round when clicked and displays to results
 const paperBtn = document.createElement('button');
 paperBtn.classList.add('paperBtn');
 paperBtn.textContent = "Paper";
 paperBtn.addEventListener('click', () =>{
-    console.log(playRound(paperBtn.textContent,computerPlay()));
+    results.textContent = playRound(paperBtn.textContent,computerPlay());
 });
-// Scissor Button that plays round when clicked and logs to console
+// Scissor Button that plays round when clicked and displays to results
 const scissorsBtn = document.createElement('button');
 scissorsBtn.classList.add('scissorsBtn');
 scissorsBtn.textContent = "Scissors";
 scissorsBtn.addEventListener('click', () =>{
-    console.log(playRound(scissorsBtn.textContent,computerPlay()));
+    results.textContent = playRound(scissorsBtn.textContent,computerPlay());
 });
-
 // Append each button into the btnContainer
 btnContainer.appendChild(rockBtn);
 btnContainer.appendChild(paperBtn);
